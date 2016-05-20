@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<META NAME="Author" CONTENT="PowerSports Network">
+<META NAME="description" CONTENT="J.R. Jackson Auto Sales is a used commercial truck dealer in Burnside, KY not far from Knoxville, Tennessee. We offer used truck sales featuring light, medium and heavy duty, box, bucket, dump, conventional and other trucks from Freightliner, Chevrolet, Ford and others in Kentucky!">
+<META NAME="keywords" CONTENT="JR Jackson Auto Sales, Kentucky, KY, Tennessee, TN, Burnside, Truck, Trucks, Dealer, Dealership, Knoxville, Sales, Commercial, Heavy Duty, Medium Duty, Light Duty, Used, Box, Utility, Service, Flatbed, Flat Bed, Pickup, Pickups, Pick Up, Pick Ups, Cargo, Van, Vans, Bucket, Cab Chassis, Dump, Conventional, Freightliner, Chevrolet, Dodge, Ford, GMC, Auction, Auctions, Trucks, Truck Paper, Trucks Paper, Paper">
+<META NAME="rating" CONTENT="General">
+<META NAME="robots" content="index,follow">
+<meta name="GOOGLEBOT" content="index,follow">
+<META NAME="revisit-after" CONTENT="14 days">
+<title>J.R. Jackson Auto Sales: Truck Dealer Selling Used, Heavy, Medium Duty, Dump, Bucket & Box Trucks in Kentucky near Knoxville, Tennessee.</title>
+<%= stylesheet_link_tag 'application' %>
+<%= javascript_include_tag :defaults, 'builder', 'lightbox', 'fastinit', 'tablesort' %>
+</head>
+
+<body>
+<div class="container">
+  <div class="sidebar">
+    <h3>Quick Links</h3>
+    <p><a href="/">Home</a></p>
+    <p><%= link_to 'Inventory', "#" %></p>
+    <p><%= mail_to "jrjackson5615012@yahoo.com", 'Contact Us', :encode => "hex" %></p>
+    <br /><br /><br /><br />
+    <div class="sidebar-search">
+      <br />
+      <h3>Search Vehicles</h3>
+      <p>Search Here</p>
+      <%# <% form_tag vehicles_path, :method => 'get' do %1> %>
+      <%#   <p> %>
+      <%#     <%= text_field_tag :search, params[:search] %1> %>
+      <%#     <%= submit_tag "Search", :name => nil %1> %>
+      <%#   </p> %>
+      <%# <% end %1> %>
+    </div>
+  </div>
+  <div class="content">
+    <%= yield %>
+  <div class="clear"> </div>
+  <div class="footer">
+   <a href="">Policies</a> | <a href="">Privacy</a> | <a href="">Terms</a> | <a href="">Site Map</a> | <a href="/admin">Administration</a>
+  </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9050201-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
