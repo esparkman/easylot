@@ -1,0 +1,38 @@
+.row
+  .medium-6.columns
+    -# %img.thumbnail{:src => "images/650x487-dodge.jpg"}/
+    = image_tag('650x487-dodge.jpg', class: 'thumbnail')
+    .row.small-up-4
+      .column
+        = image_tag('250x187-dodge-1.jpg', class: 'thumbnail')
+      .column
+        = image_tag('250x187-dodge-2.jpg', class: 'thumbnail')
+      .column
+        = image_tag('250x187-dodge-3.jpg', class: 'thumbnail')
+      .column
+        = image_tag('250x187-dodge-4.jpg', class: 'thumbnail')
+    .row
+      .column
+        %p
+          = vehicle.description
+  .medium-6.large-5.columns
+    %h3
+      = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
+      = "#{number_to_currency(vehicle.price)}"
+    .row
+      .small-3.columns
+        %h4 Details
+    .row
+      .small-6.columns
+        %ul
+          %li= "Mileage: #{vehicle.mileage}"
+          %li= "Engine: #{vehicle.engine}"
+          %li= "Transmission: #{vehicle.transmission}"
+          %li= "Exterior Color: #{vehicle.ext_color}"
+          %li= "Interior Color: #{vehicle.int_color}"
+          %li= "VIN: #{vehicle.vin}"
+
+    .row
+      .small-3.columns
+
+    %a.button.large.expanded{:href => "#"} Contact Us

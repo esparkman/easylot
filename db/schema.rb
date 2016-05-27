@@ -46,17 +46,19 @@ ActiveRecord::Schema.define(version: 20160514071055) do
     t.string   "year"
     t.string   "vin"
     t.string   "doors"
-    t.string   "color"
+    t.string   "engine"
+    t.string   "transmission"
     t.string   "int_color"
     t.string   "ext_color"
     t.text     "description"
+    t.boolean  "warranty"
+    t.string   "warranty_type"
     t.boolean  "sold"
     t.boolean  "used"
     t.boolean  "featured"
     t.boolean  "new"
-    t.boolean  "warranty"
-    t.string   "warranty_type"
     t.string   "price"
+    t.string   "mileage"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

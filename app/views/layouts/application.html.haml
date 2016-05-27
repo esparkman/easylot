@@ -1,0 +1,42 @@
+!!! 5
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'utf-8' }
+
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+
+    %title= content_for?(:title) ? yield(:title) : 'Easylot'
+
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tag
+
+  %body
+    / Small Navigation
+    .title-bar{ 'data-hide-for' => 'medium', 'data-responsive-toggle' => 'nav-menu' }
+      %a.logo-small.show-for-small-only{ href: '#' }
+        %img{ src: 'http://placehold.it/50x50?text=LOGO' }/
+      %button.menu-icon{ 'data-toggle' => '', type: 'button' }
+      .title-bar-title Menu
+    / Medium-Up Navigation
+    %nav.top-bar#nav-menu
+      .logo-wrapper.hide-for-small-only
+        .logo
+          %img{ src: 'http://placehold.it/350x150?text=LOGO' }
+      / Left Nav Section
+      .top-bar-left
+        %ul.vertical.medium-horizontal.menu
+          %li
+            = link_to 'Home', root_path
+          %li
+            = link_to 'Inventory', vehicles_path
+          %li
+            %a{ href: '#' } Contact
+      / Right Nav Section
+      .top-bar-right
+        %ul.menu
+          %li
+            %input{ placeholder: 'Search', type: 'search' }
+          %li
+            %button.button{ type: 'button' } Search
+    = yield
