@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-
 gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'
 
@@ -19,7 +18,8 @@ gem 'capistrano-rails', group: :development
 
 gem 'authem'
 gem 'decent_exposure'
-gem 'paperclip', '~> 5.0.0.beta1'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'pry'

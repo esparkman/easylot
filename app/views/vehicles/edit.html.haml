@@ -1,7 +1,18 @@
 .row
   .column
     %h1 Edit Vehicle
-    = form_for vehicle, html: { multipart: true } do |form|
+    = form_for vehicle, url: vehicle_photos_path(vehicle), method: :post, html: { multipart: true } do |form|
+      %h3 Vehicle Photos
+      .row.small-up-4
+        - vehicle.photos.each_with_index do |image, index|
+          .column
+            = image_tag(image.thumb.url)
+            = link_to 'Delete', vehicle_photo_path(vehicle, index),
+              method: :delete,
+              data: { confirm: 'Are you sure you want to delete this image?' }
       = render 'form', form: form
+      %p
+        = form.label 'Upload Photos'
+        = form.file_field :photos, multiple: true
       %p
         = form.submit 'Update Vehicle', class: 'success button'

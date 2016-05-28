@@ -1,16 +1,14 @@
 .row
   .medium-6.columns
-    -# %img.thumbnail{:src => "images/650x487-dodge.jpg"}/
-    = image_tag('650x487-dodge.jpg', class: 'thumbnail')
-    .row.small-up-4
-      .column
-        = image_tag('250x187-dodge-1.jpg', class: 'thumbnail')
-      .column
-        = image_tag('250x187-dodge-2.jpg', class: 'thumbnail')
-      .column
-        = image_tag('250x187-dodge-3.jpg', class: 'thumbnail')
-      .column
-        = image_tag('250x187-dodge-4.jpg', class: 'thumbnail')
+    - if vehicle.photos?
+      = image_tag vehicle.photos.first.large.url, class: 'thumbnail'
+      .row.small-up-4
+        - vehicle.photos.each do |photo|
+          .column
+            = image_tag photo.thumb.url, class: 'thumbnail'
+    - else
+      %h3 No Images Available
+
     .row
       .column
         %p
