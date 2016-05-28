@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160514071055) do
     t.boolean  "new"
     t.string   "price"
     t.string   "mileage"
+    t.string   "interior_type"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

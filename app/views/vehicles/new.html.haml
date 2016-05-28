@@ -1,0 +1,7 @@
+.row
+  .column
+    %h1 Add A New Vehicle
+    = form_for vehicle, html: { multipart: true } do |form|
+      = render 'form', form: form
+      %p
+        = form.submit 'Save Vehicle', class: 'success button'

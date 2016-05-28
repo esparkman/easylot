@@ -7,12 +7,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+puts 'Seeding User'
 User.create(
   email: 'me@evansparkman.com',
   password: 'password',
   password_confirmation: 'password',
   admin: true
 )
+
+puts 'Seeding Vehicle'
 Vehicle.create(year: '2014',
                make: 'Dodge',
                model: 'RAM 1500',

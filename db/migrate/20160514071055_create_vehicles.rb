@@ -20,6 +20,7 @@ class CreateVehicles < ActiveRecord::Migration
       t.boolean :new
       t.string :price
       t.string :mileage
+      t.string :interior_type
 
       t.timestamps null: false
     end
