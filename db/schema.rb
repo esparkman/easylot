@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160518012023) do
+ActiveRecord::Schema.define(version: 20160514071055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,12 +39,6 @@ ActiveRecord::Schema.define(version: 20160518012023) do
     t.datetime "updated_at"
   end
 
-  create_table "vehicle_photos", force: :cascade do |t|
-    t.integer "vehicle_id"
-  end
-
-  add_index "vehicle_photos", ["vehicle_id"], name: "index_vehicle_photos_on_vehicle_id", using: :btree
-
   create_table "vehicles", force: :cascade do |t|
     t.string   "make"
     t.string   "model"
@@ -52,25 +46,21 @@ ActiveRecord::Schema.define(version: 20160518012023) do
     t.string   "year"
     t.string   "vin"
     t.string   "doors"
-    t.string   "color"
+    t.string   "engine"
+    t.string   "transmission"
     t.string   "int_color"
     t.string   "ext_color"
     t.text     "description"
+    t.boolean  "warranty"
+    t.string   "warranty_type"
     t.boolean  "sold"
     t.boolean  "used"
     t.boolean  "featured"
     t.boolean  "new"
-    t.boolean  "warranty"
-    t.string   "warranty_type"
-    t.integer  "price"
-    t.string   "interior_type"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.string   "vehicle_photo_file_name"
-    t.string   "vehicle_photo_content_type"
-    t.integer  "vehicle_photo_file_size"
-    t.datetime "vehicle_photo_updated_at"
+    t.string   "price"
+    t.string   "mileage"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
-  add_foreign_key "vehicle_photos", "vehicles"
 end
