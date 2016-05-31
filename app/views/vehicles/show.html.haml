@@ -1,4 +1,4 @@
-.row
+.row.vdp
   .medium-6.columns
     - if vehicle.photos?
       = image_tag vehicle.photos.first.large.url, class: 'thumbnail'
@@ -7,7 +7,7 @@
           .column
             = image_tag photo.thumb.url, class: 'thumbnail'
     - else
-      %h3 No Images Available
+      = image_tag 'no_image_available.jpeg', class: 'thumbnail'
 
     .row
       .column
@@ -33,4 +33,4 @@
     .row
       .small-3.columns
 
-    %a.button.large.expanded{:href => "#"} Contact Us
+    %a.button.hotrod.large.expanded{:href => "#"} Contact Us

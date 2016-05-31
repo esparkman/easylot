@@ -15,14 +15,14 @@
     / Small Navigation
     .title-bar{ 'data-hide-for' => 'medium', 'data-responsive-toggle' => 'nav-menu' }
       %a.logo-small.show-for-small-only{ href: '#' }
-        %img{ src: 'http://placehold.it/50x50?text=LOGO' }/
+        = image_tag 'new-logo.png'
       %button.menu-icon{ 'data-toggle' => '', type: 'button' }
       .title-bar-title Menu
     / Medium-Up Navigation
     %nav.top-bar#nav-menu
       .logo-wrapper.hide-for-small-only
         .logo
-          %img{ src: 'http://placehold.it/350x150?text=LOGO' }
+          = image_tag 'new-logo.png'
       / Left Nav Section
       .top-bar-left
         %ul.vertical.medium-horizontal.menu
@@ -38,5 +38,7 @@
           %li
             %input{ placeholder: 'Search', type: 'search' }
           %li
-            %button.button{ type: 'button' } Search
+            %button.button.hotrod{ type: 'button' } Search
     = yield
+
+    = render 'shared/footer'

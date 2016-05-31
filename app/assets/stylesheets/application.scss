@@ -1,9 +1,27 @@
 @import "foundation_and_overrides";
 
+.top-bar {
+  background-color: #7c2829;
+  height: 240px;
+  ul {
+    background-color: transparent;
+  }
+}
+
+.menu {
+  li a {
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.vdp { padding-top: 20px;}
 /* Variables */
 
 // Adjust width accordingly (use even #'s)
-$logo-width: 118px;
+$logo-width: 360px;
 // Reduce px value to increase space between logo and menu text
 $logo-padding: $logo-width - 32px;
 // Leave alone
@@ -32,7 +50,7 @@ $logo-margin: - ($logo-width / 2);
 
     .logo {
       width: $logo-width;
-      height:  92px;
+      height:  195px;
       position: absolute;
       left: 50%;
       right: 50%;

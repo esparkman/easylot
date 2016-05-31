@@ -21,6 +21,9 @@ gem 'decent_exposure'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 
+gem 'quiet_assets', group: :development
+
+
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
