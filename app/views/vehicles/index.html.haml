@@ -1,3 +1,8 @@
+- if user_signed_in?
+  .row.vdp
+    .column
+      %h3
+        = link_to "Add Vehicle", new_vehicle_path, class: 'button success'
 .row.small-up-2.large-up-4.vdp
   - vehicles.each do |vehicle|
     .column

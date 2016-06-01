@@ -7,5 +7,7 @@ class ApplicationController < ActionController::Base
     strategy DecentExposure::StrongParametersStrategy
   end
 
-  TITLE = 'J.R. Jackson Auto Sales'
+  def after_sign_out_path_for(resource_or_scope)
+    root_path
+  end
 end

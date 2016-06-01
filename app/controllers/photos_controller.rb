@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   expose(:vehicle) { Vehicle.find(params[:vehicle_id]) }
+  before_action :authenticate_user!, except: [:index, :show]
 
   def create
     add_more_photos(photos_params[:photos])
