@@ -1,9 +1,22 @@
 Rails.application.routes.draw do
-  root "listings#index"
+  devise_for :users
+
+  authenticated :user do
+    root 'vehicles#dashboard', as: 'authenticated_root'
+  end
+
+  as :user do
+    get "/login" => "devise/sessions#new"
+    delete "/logout" => "devise/sessions#destroy"
+  end
+
+  resources :announcements
 
   resources :vehicles do
     resources :photos, only: [:create, :destroy]
   end
+
+  root "listings#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

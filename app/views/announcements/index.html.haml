@@ -1,4 +1,8 @@
 .row.small-up-2.large-up-4.vdp
-  - announcements.each do |announcement|
-    .column
-      = link_to announcement.title, announcement
+  %h3
+    = link_to "Add Announcement", new_announcement_path, class: 'button'
+  .column
+    %ul
+      - announcements.each do |announcement|
+        %li
+          = link_to announcement.title, announcement

@@ -30,7 +30,9 @@
           %li= "Interior Color: #{vehicle.int_color}"
           %li= "VIN: #{vehicle.vin}"
 
-    .row
-      .small-3.columns
-
     %a.button.hotrod.large.expanded{:href => "#"} Contact Us
+    - if user_signed_in?
+      .row
+        .small-8.columns
+          = link_to 'Edit', edit_vehicle_path(vehicle), class: 'button large expaneded'
+          = link_to 'Destory', vehicle_path(vehicle), class: 'button large alert expaneded', method: :delete, data:{confirm:"are you sure you want to delete this vehicle"}

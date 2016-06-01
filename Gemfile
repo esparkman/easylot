@@ -16,11 +16,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'capistrano-rails', group: :development
 
-gem 'authem'
+gem 'devise'
 gem 'decent_exposure'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'config'
+gem 'administrate'
+gem 'administrate-field-image'
 
 gem 'quiet_assets', group: :development
 
