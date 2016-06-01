@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: easylot_production
-  username: easylot
-  password: <%= ENV['EASYLOT_DATABASE_PASSWORD'] %>
+  username: rails
+  password: <%= Settings.db_password %>

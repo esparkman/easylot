@@ -14,8 +14,6 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'capistrano-rails', group: :development
-
 gem 'devise'
 gem 'decent_exposure'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
@@ -23,9 +21,7 @@ gem 'mini_magick'
 gem 'config'
 gem 'administrate'
 gem 'administrate-field-image'
-
-gem 'quiet_assets', group: :development
-
+gem 'puma'
 
 group :development, :test do
   gem 'pry'
@@ -36,6 +32,12 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'quiet_assets'
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
 end
 
 group :test do

@@ -92,6 +92,12 @@ GEM
     capistrano-rails (1.1.6)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+    capistrano3-puma (1.2.1)
+      capistrano (~> 3.0)
+      puma (>= 2.6)
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
     config (1.2.1)
@@ -176,6 +182,7 @@ GEM
       slop (~> 3.4)
     pry-nav (0.2.4)
       pry (>= 0.9.10, < 0.11.0)
+    puma (3.4.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -262,7 +269,11 @@ DEPENDENCIES
   administrate-field-image
   better_errors
   binding_of_caller
+  capistrano
+  capistrano-bundler
   capistrano-rails
+  capistrano-rvm
+  capistrano3-puma
   carrierwave!
   config
   decent_exposure
@@ -277,6 +288,7 @@ DEPENDENCIES
   pg (~> 0.15)
   pry
   pry-nav
+  puma
   quiet_assets
   rails (= 4.2.6)
   sass-rails (~> 5.0)
