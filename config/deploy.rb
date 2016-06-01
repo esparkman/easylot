@@ -1,5 +1,5 @@
 # Change these
-server '45.55.203.16', port: 80, roles: [:web, :app, :db], primary: true
+server '45.55.203.16', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:esparkman/easylot.git'
 set :application,     'easylot'
