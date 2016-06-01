@@ -49,3 +49,11 @@ Vehicle.create(year: '2014',
                used: true,
                new: false,
                featured: true)
+
+puts 'Seeding Announcements'
+Announcement.create(title: "We've Moved!", body: "We have moved to a new location! To better server our customers we are now located at:
+
+5610 South HWY 27
+Somerset, KY 42501
+
+We are conveniently located next door to the John Deere Dealership.")

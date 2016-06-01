@@ -1,0 +1,7 @@
+.row
+  .column
+    %h1 Edit Vehicle
+    = form_for announcement do |form|
+      = render 'form', form: form
+      %p
+        = form.submit 'Update Announcement', class: 'success button'

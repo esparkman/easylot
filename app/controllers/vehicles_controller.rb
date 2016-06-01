@@ -1,5 +1,6 @@
 class VehiclesController < ApplicationController
   expose(:vehicle, attributes: :vehicle_params)
+  expose(:vehicles)
 
   def create
     if vehicle.save

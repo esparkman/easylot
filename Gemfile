@@ -20,6 +20,7 @@ gem 'authem'
 gem 'decent_exposure'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
+gem 'config'
 
 gem 'quiet_assets', group: :development
 

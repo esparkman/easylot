@@ -1,7 +1,4 @@
-.row.column.text-center
-  %h2 Our Featured Vehicles
-  %hr/
-.row.small-up-2.large-up-4
+.row.small-up-2.large-up-4.vdp
   - vehicles.each do |vehicle|
     .column
       - if vehicle.photos?
@@ -13,11 +10,3 @@
       %p
         = "#{number_to_currency(vehicle.price)}"
       = link_to 'View Details', vehicle, class: 'button expaneded'
-
-%hr/
-.row.column.text-center
-  - announcements.each do |announcement|
-    %h3= announcement.title
-    %p
-      = announcement.body
-    %hr

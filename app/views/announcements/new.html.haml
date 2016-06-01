@@ -1,0 +1,8 @@
+.row
+  .column
+    %h1
+      Create an Announcement
+    = form_for announcement do |form|
+      = render 'form', form: form
+      %p
+        = form.submit 'Save Announcement', class: 'success button'

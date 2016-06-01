@@ -7,5 +7,5 @@ class ApplicationController < ActionController::Base
     strategy DecentExposure::StrongParametersStrategy
   end
 
-  expose(:title) { 'J.R. Jackson Auto Sales' }
+  TITLE = 'J.R. Jackson Auto Sales'
 end
