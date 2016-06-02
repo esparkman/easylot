@@ -3,7 +3,7 @@ server '45.55.203.16', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:esparkman/easylot.git'
 set :application,     'easylot'
-set :user,            'deploy'
+set :user,            'rails'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
