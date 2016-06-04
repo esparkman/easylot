@@ -9,21 +9,23 @@
         J.R. Jackson Auto Sales
       %form.footer-form
         .row
-          .medium-9.medium-push-3.columns
-            %label
-              %label.contact{:for => "email"} Contact Us
-              %input#email{:placeholder => "Email Address", :type => "email"}/
+          %label.float-left Contact Us
         .row
-          .medium-9.medium-push-3.columns
-            %label
-              %textarea#message{:placeholder => "Message", :rows => "5"}
-          .row
-            .medium-9.medium-push-3.columns
-              %button.submit{:type => "submit", :value => "Submit"} Send
+          .small-6.columns
+            %label.float-left Toll Free: (888) 724-8607
+          .small-6.columns
+            %label.float-left Phone: (606) 561-5012
+        .row
+          .small-6.columns
+            %label.float-left Fax: (606) 561-8962
+          .small-6.columns
+            %label.float-left (Mobile): (606) 271-2149
+
     .small-12.medium-6.medium-pull-6.columns
-      %p.logo.hide-for-small-only.title
-        %i.fi-target
-        J.R. Jackson Auto Sales
+      .row
+        %p.logo.hide-for-small-only.title.float-left
+          %i.fi-target
+          J.R. Jackson Auto Sales
       .row
         %ul.contact
           %li
@@ -31,12 +33,4 @@
               5610 S. Highway 27
               %br
               Somerset, KY 42501
-          %li
-            Toll Free: (888) 724-8607
-          %li
-            Phone: (606) 561-5012
-          %li
-            Fax: (606) 561-8962
-          %li
-            (Mobile): (606) 271-2149
       %p.copyright &copy; #{Time.now.year} J.R. Jackson Auto Sales
