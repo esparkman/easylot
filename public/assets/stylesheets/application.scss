@@ -1,0 +1,336 @@
+@import "foundation_and_overrides";
+
+$hotrod: #8e3023;
+$camero: #7c2829;
+
+.top-bar {
+  background-color: #7c2829;
+  height: 240px;
+  padding-right: 155px;
+  ul {
+    background-color: transparent;
+  }
+  input {
+    max-width: 400px;
+  }
+}
+
+.menu {
+  li a {
+    display: inline-block;
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#search-icon {
+  padding-top: 20px;
+  input {
+    margin-top: -7px;
+    padding-left: 25px;
+    float: left;
+    width: 150%;
+    height: 45px;
+    background-color: #eee;
+    border: none;
+    background-image: url(http://s1-library.zurb.com/assets/search-icon-cb74b89591b3b72f2463abce49c70d10.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    font-size: 20px;
+  }
+}
+
+.ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+    background-color:#eee;
+    border: 1px solid #aaaaaa;
+    max-height: 200px;
+    font-size: 20px;
+
+    overflow-y: auto;   /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    z-index:1000 !important;
+  }
+
+.vdp { padding-top: 20px;}
+
+.footer { background-color: $hotrod}
+/* Variables */
+
+.ui-menu-item {
+  list-style-type: none;
+}
+
+// Adjust width accordingly (use even #'s)
+$logo-width: 360px;
+// Reduce px value to increase space between logo and menu text
+$logo-padding: $logo-width - 32px;
+// Leave alone
+$logo-margin: - ($logo-width / 2);
+
+/* Small Navigation */
+.logo-small {
+  float: right;
+}
+
+.title-bar {
+  padding: 0 .5rem;
+}
+
+.menu-icon,
+.title-bar-title {
+  position: relative;
+  top: 10px;
+}
+
+/* Medium-Up Navigation */
+@media only screen and (min-width: 40rem) {
+
+  .logo-wrapper {
+    position: relative;
+
+    .logo {
+      width: $logo-width;
+      height:  195px;
+      position: absolute;
+      left: 54%;
+      right: 50%;
+      top: -6px;
+      margin-left: $logo-margin;
+    }
+  }
+
+  // Right part
+  .top-bar-right {
+    width: 50%;
+    padding-left: $logo-padding;
+
+    ul {
+      float: left;
+    }
+  }
+
+  // Left part
+  .top-bar-left {
+    width:  50%;
+    padding-right: $logo-padding;
+
+    ul {
+      float: right;
+    }
+  }
+}
+
+.row {
+  max-width: 1200px;
+}
+
+.hero {
+  height: 20vh;
+  overflow: hidden;
+}
+
+.title { text-align: left;}
+
+.footer {
+  background-color: $camero;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+
+  .social a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    margin: 0 3px 0 0;
+  }
+
+  .copyright {
+    color: #8f9296;
+    font-size: 0.875rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .footer-form {
+    textarea, input {
+      border-radius: 3px;
+      background-color: #1f2022;
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+      border: none;
+      resize: none;
+      font: inherit;
+      font-size: 0.875rem;
+      font-weight: normal;
+      color: #d1d2d2;
+      padding: 1.3rem;
+    }
+
+    label {
+      color: #fff;
+      font-size: 1.2rem;
+      margin: 0 0 1rem 0;
+      font-weight: bold;
+    }
+
+    .submit {
+      border-radius: 3px;
+      background-color: #33383b;
+      color: #ffffff;
+      border: 0;
+      padding: 1rem 3.5rem;
+      font-weight: bold;
+      float: right;
+      margin: 0 1rem 2rem 0;
+    }
+  }
+
+  .footer-links a {
+    list-style: none;
+    font-weight: normal;
+    color: #fff;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    font-size: 0.875rem;
+
+    &::after {
+      content: "•";
+      padding: 0 0.2rem 0 0.4rem;
+    }
+
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 40.063em) {
+    padding: 4rem;
+
+    p {
+      text-align: left;
+    }
+
+    .social {
+      text-align: left;
+      margin: 0;
+    }
+
+    .footer-form {
+      .contact {
+        position: absolute;
+        left: -45%;
+        top: 10%;
+      }
+    }
+
+  }
+  .contact {
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    color: #fff;
+
+    li {
+      margin-bottom: .5rem;
+
+      p {
+        padding-left: 5rem;
+      }
+    }
+
+    i {
+      position: absolute;
+      background-color: #33383b;
+      color: #fff;
+      font-size: 2rem;
+      border-radius: 50%;
+      line-height: 1;
+      margin: 0 0 0 -4rem;
+      vertical-align: middle;
+      padding: .25em .45em;
+    }
+  }
+
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+// Default medium-gray color
+$medium-gray: #cacaca;
+// Default global padding
+$global-padding: 1rem;
+// Global value used for all elements that have a border radius.
+$global-radius: 3px;
+
+// Setting the form border color
+$form-border-color: $medium-gray;
+// Setting the form padding
+$form-padding: $global-padding;
+// Setting the form border radius
+$form-radius: $global-radius;
+
+.log-in-form {
+  border: 1px solid $form-border-color;
+  padding: $form-padding;
+  border-radius: $form-radius;
+}
+
+
+// #search-icon input {
+//   width: 100%;
+//   font-size: 1em;
+//   padding: .5em 1.3em;
+//   background: transparent;
+//   border: 1px solid #ddd;
+//   border-radius: 2em;
+// }
+
+// #search-icon input:focus {
+//   border-color: #A5CEF5;
+// }
+
+// #search-icon .results .ui-widget-content {
+//   background: #fff;
+//   font-size: .9em;
+//   padding: .5em 0;
+//   border-color: #ddd;
+//   box-shadow: 0 .1em .2em rgba(187, 187, 187, 0.64);
+//   line-height: 1.2;
+//   max-height: 20em;
+//   overflow: hidden;
+//   overflow-y: auto;
+// }
+
+// #search-icon .results .ui-menu-item {
+//   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+//   padding: .4em .6em .4em 6.2em;
+//   position: relative;
+//   border: 0;
+//   border-left: 5px solid transparent;
+//   position: relative;
+//   height: 6.5em;
+// }
+
+// #search-icon .results .ui-state-focus {
+//   background: #fff;
+//   border-left-color: #08c;
+//   font-weight: 300;
+// }
