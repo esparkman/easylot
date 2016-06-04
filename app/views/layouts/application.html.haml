@@ -13,11 +13,11 @@
 
   %body
     / Small Navigation
-    .title-bar{ 'data-hide-for' => 'medium', 'data-responsive-toggle' => 'nav-menu' }
-      %a.logo-small.show-for-small-only{ href: '#' }
-        = image_tag 'new-logo.png'
-      %button.menu-icon{ 'data-toggle' => '', type: 'button' }
-      .title-bar-title Menu
+    -# .title-bar{ 'data-hide-for' => 'medium', 'data-responsive-toggle' => 'nav-menu' }
+    -#   %a.logo-small.show-for-small-only{ href: '#' }
+    -#     = image_tag 'new-logo.png'
+    -#   %button.menu-icon{ 'data-toggle' => '', type: 'button' }
+    -#   .title-bar-title Menu
     / Medium-Up Navigation
     %nav.top-bar#nav-menu
       .logo-wrapper.hide-for-small-only
@@ -37,6 +37,8 @@
         .row
           %ul.menu
             - if user_signed_in?
+              %li
+                = link_to "Dashboard", admin_path
               %li
                 = link_to "Account Settings", edit_user_registration_path
               %li

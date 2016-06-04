@@ -1,0 +1,78 @@
+.row
+  .col-md-4
+    .form-group
+      %label Price
+      = form.text_field :price, placeholder:'Price', type: 'text', value: vehicle.price, class: 'form-control'
+  .col-md-4
+    .form-group
+      %label VIN
+      = form.text_field :vin, placeholder:'VIN', type: 'text', value: vehicle.vin, class: 'form-control'
+.row
+  .col-md-3
+    .form-group
+      %label Year
+      = form.text_field :year, placeholder:'Year', type: 'text', value: vehicle.year, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Make
+      = form.text_field :make, placeholder:'Make', type: 'text', value: vehicle.make, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Model
+      = form.text_field :model, placeholder:'Model', type: 'text', value: vehicle.model, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Trim
+      = form.text_field :trim, placeholder:'Trim', type: 'text', value: vehicle.trim, class: 'form-control'
+.row
+  .col-md-3
+    .form-group
+      %label Mileage
+      = form.text_field :mileage, placeholder:'Mileage', type: 'text', value: vehicle.mileage, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Exterior Color
+      = form.text_field :ext_color, placeholder:'Exterior Color', type: 'text', value: vehicle.ext_color, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Interior Color
+      = form.text_field :int_color, placeholder:'Interior Color', type: 'text', value: vehicle.int_color, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Doors
+      = form.text_field :doors, placeholder:'Doors', type: 'text', value: vehicle.doors, class: 'form-control'
+.row
+  .col-md-3
+    .form-group
+      %label Type of Interior
+      = form.text_field :interior_type, placeholder:'Type of Interior', type: 'text', value: vehicle.interior_type, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Does the Vehicle have a Warranty
+      = form.check_box :warranty, value: false, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Type of Warranty
+      = form.text_field :warranty_type, placeholder:'Type of Warrabty', type: 'text', value: vehicle.warranty_type, class: 'form-control'
+.row
+  .col-md-12
+    .form-group
+      %label Description
+      = form.text_area :description, placeholder: "Enter other information about the Vehicle Here", rows: "5", value: vehicle.description, class: 'form-control'
+.row
+  .col-md-3
+    .form-group
+      %label Is this Vehicle New
+      = form.check_box :new, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Is this Vehicle Used
+      = form.check_box :used, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Is this a Featured Vehicle
+      = form.check_box :featured, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Is this Vehicle Sold
+      = form.check_box :sold, class: 'form-control'
