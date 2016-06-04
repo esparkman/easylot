@@ -45,7 +45,7 @@
    user: 'rails',
    keys: %w(/Users/evansparkman/.ssh/id_rsa),
    forward_agent: false,
-   auth_methods: %w(publickey)
+   auth_methods: %w(publickey password)
  }
 #
 # The server-based syntax can be used to override options:
