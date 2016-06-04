@@ -2,11 +2,8 @@ Rails.application.routes.draw do
   devise_for :users,
              path: 'admin',
              controllers: {
-               # confirmations: 'users/confirmations',
-              #  passwords: 'users/passwords',
-              #  registrations: 'users/registrations',
+               registrations: 'users/registrations',
                sessions: 'users/sessions',
-               # unlocks: 'users/unlocks',
              }, skip: [:sessions]
 
  as :user do
