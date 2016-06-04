@@ -1,6 +1,7 @@
 class VehiclesController < ApplicationController
   expose(:vehicle, attributes: :vehicle_params)
-  expose(:vehicles)
+  expose(:vehicles) { Vehicle.search(vehicle_query, fields: [:make, :model, :year], match: :word_start, suggest: true) }
+  expose(:vehicle_query) { params[:query].presence || '*' }
 
   # before_action :authenticate_user!, except: [:index, :show]
 
@@ -12,7 +13,18 @@ class VehiclesController < ApplicationController
     end
   end
 
-  def dashboard
+  def search
+    if params[:query].present?
+      vehicles
+    else
+      Vehicle.all
+    end
+  end
+
+  def autocomplete
+   render json: Vehicle.search(params[:term], { 
+                               fields: ["make", "model", "year"],
+                               limit: 10}).map(&:make).uniq
   end
 
   private

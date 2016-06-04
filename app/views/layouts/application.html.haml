@@ -41,11 +41,13 @@
                 = link_to "Account Settings", edit_user_registration_path
               %li
                 = link_to('Logout', logout_path, :method => :delete)
-        %ul.menu
-          %li
-            %input{ placeholder: 'Search', type: 'search' }
-          %li
-            %button.button.hotrod{ type: 'button' } Search
+        .row
+          %ul.menu
+            = form_tag search_vehicles_path, method: :get do
+              %li#search-icon
+                = text_field_tag :query, params[:query], placeholder: 'Search', type: 'text'
+              -# %li
+              -#   = submit_tag "Search", class: 'button hotrod', name: nil
     = yield
 
     = render 'shared/footer'

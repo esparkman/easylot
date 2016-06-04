@@ -6,13 +6,18 @@ $camero: #7c2829;
 .top-bar {
   background-color: #7c2829;
   height: 240px;
+  padding-right: 155px;
   ul {
     background-color: transparent;
+  }
+  input {
+    max-width: 400px;
   }
 }
 
 .menu {
   li a {
+    display: inline-block;
     color: $white;
     &:hover {
       text-decoration: underline;
@@ -20,10 +25,46 @@ $camero: #7c2829;
   }
 }
 
+#search-icon {
+  padding-top: 20px;
+  input {
+    margin-top: -7px;
+    padding-left: 25px;
+    float: left;
+    width: 150%;
+    height: 45px;
+    background-color: #eee;
+    border: none;
+    background-image: url(http://s1-library.zurb.com/assets/search-icon-cb74b89591b3b72f2463abce49c70d10.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    font-size: 20px;
+  }
+}
+
+.ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+    background-color:#eee;
+    border: 1px solid #aaaaaa;
+    max-height: 200px;
+    font-size: 20px;
+
+    overflow-y: auto;   /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    z-index:1000 !important;
+  }
+
 .vdp { padding-top: 20px;}
 
 .footer { background-color: $hotrod}
 /* Variables */
+
+.ui-menu-item {
+  list-style-type: none;
+}
 
 // Adjust width accordingly (use even #'s)
 $logo-width: 360px;
@@ -57,7 +98,7 @@ $logo-margin: - ($logo-width / 2);
       width: $logo-width;
       height:  195px;
       position: absolute;
-      left: 50%;
+      left: 54%;
       right: 50%;
       top: -6px;
       margin-left: $logo-margin;
@@ -252,3 +293,44 @@ $form-radius: $global-radius;
   border-radius: $form-radius;
 }
 
+
+// #search-icon input {
+//   width: 100%;
+//   font-size: 1em;
+//   padding: .5em 1.3em;
+//   background: transparent;
+//   border: 1px solid #ddd;
+//   border-radius: 2em;
+// }
+
+// #search-icon input:focus {
+//   border-color: #A5CEF5;
+// }
+
+// #search-icon .results .ui-widget-content {
+//   background: #fff;
+//   font-size: .9em;
+//   padding: .5em 0;
+//   border-color: #ddd;
+//   box-shadow: 0 .1em .2em rgba(187, 187, 187, 0.64);
+//   line-height: 1.2;
+//   max-height: 20em;
+//   overflow: hidden;
+//   overflow-y: auto;
+// }
+
+// #search-icon .results .ui-menu-item {
+//   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+//   padding: .4em .6em .4em 6.2em;
+//   position: relative;
+//   border: 0;
+//   border-left: 5px solid transparent;
+//   position: relative;
+//   height: 6.5em;
+// }
+
+// #search-icon .results .ui-state-focus {
+//   background: #fff;
+//   border-left-color: #08c;
+//   font-weight: 300;
+// }

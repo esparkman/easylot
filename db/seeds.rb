@@ -49,6 +49,18 @@ Vehicle.create(year: '2014',
                used: true,
                new: false,
                featured: true)
+Vehicle.create(year: '2015', make: 'Honda', model: 'Pilot', price: '27500', used: true,
+               featured: true)
+Vehicle.create(year: '2015', make: 'Toyota', model: 'Camry', price: '27500', used: true,
+               featured: true)
+Vehicle.create(year: '2015', make: 'Honda', model: 'Civic', price: '27500', used: true,
+               featured: true)
+Vehicle.create(year: '2015', make: 'Ford', model: 'F-150', price: '27500', used: true,
+               featured: true)
+Vehicle.create(year: '2015', make: 'KIA', model: 'Forte', price: '27500', used: true,
+               featured: true)
+Vehicle.create(year: '2015', make: 'Chevy', model: 'Silverado', price: '27500', used: true,
+               featured: true)
 
 puts 'Seeding Announcements'
 Announcement.create(title: "We've Moved!", body: "We have moved to a new location! To better server our customers we are now located at:
