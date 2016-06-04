@@ -23,4 +23,10 @@ class Users::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+
+  private
+
+  def configure_sign_in_params 
+    devise_parameter_sanitizer.sanitize(:sign_in)
+  end
 end

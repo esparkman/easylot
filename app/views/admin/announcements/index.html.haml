@@ -1,8 +1,17 @@
-.row.small-up-2.large-up-4.vdp
-  %h3
-    = link_to "Add Announcement", new_announcement_path, class: 'button'
-  .column
-    %ul
-      - announcements.each do |announcement|
-        %li
-          = link_to announcement.title, announcement
+.col-md-12
+  .card
+    .header
+      %h4.title Announcements
+    .content
+      .table-full-width
+        %table.table
+          %tbody
+            - announcements.each do |announcement|
+              %tr
+                %td
+                %td= announcement.title
+                %td.td-actions.text-right
+                  = link_to 'Edit Announcement', edit_admin_announcement_path(announcement), class: 'btn btn-info btn-simple btn-xs', title: 'Edit Task'
+                  %i.fa.fa-edit
+                  = link_to 'Destroy', admin_announcement_path(announcement), class: 'btn btn-danger btn-simple btn-xs', title: 'Remove', method: :delete, data:{confirm:'are you sure you want to delete this vehicle'}
+                  %i.fa.fa-times

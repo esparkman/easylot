@@ -1,7 +1,11 @@
 .row
-  .column
-    %h1 Edit Vehicle
-    = form_for announcement do |form|
-      = render 'form', form: form
-      %p
-        = form.submit 'Update Announcement', class: 'success button'
+  = form_for [:admin, announcement] do |form|
+    .col-md-8
+      .card
+        .header
+          %h4.title Edit Announcement
+        .content
+          %form
+            = render 'form', form: form
+          .clearfix
+            = form.submit 'Update Announcement', class: 'btn btn-info btn-fill pull-right'

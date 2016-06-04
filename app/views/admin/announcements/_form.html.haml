@@ -1,8 +1,9 @@
-%p
-  = form.label 'Announcement Title'
-  %br/
-  = form.text_field :title
-%p
-  = form.label 'Announcement Content'
-  %br/
-  = form.text_area :body
+.row
+  .col-md-12
+    .form-group
+      %label Announcement Title
+      = form.text_field :title, placeholder: "Announcement Title", value: announcement.title, class: 'form-control'
+  .col-md-12
+    .form-group
+      %label Announcement Message
+      = form.text_area :dbody, placeholder: "Enter your Announcement Message here", rows: "8", value: announcement.body, class: 'form-control'

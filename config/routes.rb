@@ -2,13 +2,19 @@ Rails.application.routes.draw do
   devise_for :users,
              path: 'admin',
              controllers: {
-               sessions: 'users/sessions'
-             }
+               # confirmations: 'users/confirmations',
+              #  passwords: 'users/passwords',
+              #  registrations: 'users/registrations',
+               sessions: 'users/sessions',
+               # unlocks: 'users/unlocks',
+             }, skip: [:sessions]
 
-  as :user do
-    get '/login' => 'devise/sessions#new'
-    delete '/logout' => 'devise/sessions#destroy'
-  end
+ as :user do
+   get 'login' => 'users/sessions#new', as: :new_user_session
+   post 'login' => 'users/sessions#create', as: :user_session
+   delete 'logout' => 'users/sessions#destroy', as: :destroy_user_session
+   get 'register' => 'users/registrations#new'
+ end
 
   namespace :admin do
     resources :announcements
@@ -26,8 +32,6 @@ Rails.application.routes.draw do
       get :autocomplete
     end
   end
-
-
 
   get 'admin' => 'admin/vehicles#index'
   root 'listings#index'
