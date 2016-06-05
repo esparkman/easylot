@@ -51,7 +51,7 @@
     -#             = text_field_tag :query, params[:query], placeholder: 'Search', type: 'text'
     -#           -# %li
     -#           -#   = submit_tag "Search", class: 'button hotrod', name: nil
-    %nav.navbar.navbar-default
+    %nav.navbar.navbar-default.main.camero
       .container-fluid
         .navbar-header
           %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
@@ -62,7 +62,7 @@
           %a.navbar-brand.hidden-sm.hidden-md.hidden-lg{:href => "#"}
             = image_tag 'new-logo.png'
         .collapse.navbar-collapse
-          %ul.nav.navbar-nav
+          %ul.nav.navbar-nav.main
             %li
               = link_to "Home", root_path
             %li

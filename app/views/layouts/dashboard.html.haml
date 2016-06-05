@@ -15,7 +15,7 @@
 
     %link{:href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,700,300", :rel => "stylesheet", :type => "text/css"}/
-  
+
   %body
     .wrapper
       .sidebar{"data-color" => "black", "data-image" => "#{image_path('sidebar-5.jpg')}"}
@@ -71,34 +71,3 @@
           .container-fluid
             %p.copyright.pull-right
               &copy; #{Time.now.year} J.R. Jackson Auto Sales powered by EasyLot
-
-  / Core JS Files
-  %script{:src => "../../../assets/jquery-1.10.2.js", :type => "text/javascript"}
-  %script{:src => "../../../assets/bootstrap.min.js", :type => "text/javascript"}
-  / Checkbox, Radio & Switch Plugins
-  %script{:src => "../../../assets/bootstrap-checkbox-radio-switch.js"}
-  / Charts Plugin
-  %script{:src => "../../../assets/chartist.min.js"}
-  / Notifications Plugin
-  %script{:src => "../../../assets/bootstrap-notify.js"}
-  / Google Maps Plugin
-  %script{:src => "https://maps.googleapis.com/maps/api/js?sensor=false", :type => "text/javascript"}
-  / Light Bootstrap Table Core javascript and methods for Demo purpose
-  %script{:src => "../../../assets/light-bootstrap-dashboard.js"}
-  -# / Light Bootstrap Table DEMO methods, don't include it in your project!
-  -# %script{:src => "../assets/demo.js"}
-  -# :javascript
-  -#   $(document).ready(function(){
-  -#
-  -#           	demo.initChartist();
-  -#
-  -#           	$.notify({
-  -#               	icon: 'pe-7s-gift',
-  -#               	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
-  -#
-  -#               },{
-  -#                   type: 'info',
-  -#                   timer: 4000
-  -#               });
-  -#
-  -#       	});
