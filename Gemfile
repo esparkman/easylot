@@ -21,8 +21,6 @@ gem 'decent_exposure'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'config'
-gem 'administrate'
-gem 'administrate-field-image'
 gem 'puma'
 gem 'searchkick'
 
