@@ -2,6 +2,8 @@
   .card
     .header
       %h4.title Announcements
+      = link_to 'Add Announcement', new_admin_announcement_path, class: 'btn btn-success btn-fill'
+
     .content
       .table-full-width
         %table.table
