@@ -1,0 +1,32 @@
+%nav.navbar.navbar-default.camero{:role => "navigation"}
+  .navbar-header
+    %button.navbar-toggle{"data-target" => "#mainnavbar", "data-toggle" => "collapse", :type => "button"}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+  .navbar-center.navbar-brand-main
+    %a.navbar-brand-main{:href => "/"}
+      %img.img-responsive{:alt => "", :src => "/assets/new-logo-4a39deb2fc84e6a2d9258f55e379cd24beb24522acb4701bd726ffc389fb3f42.png"}/
+  #mainnavbar.collapse.navbar-collapse
+    %ul.nav.navbar-nav.navbar-left
+      %li
+        %a{:href => "/"} Home
+      %li
+        %a{:href => "/vehicles"} Inventory
+    %ul.nav.navbar-nav.navbar-right
+      .row
+        .col-md-8
+          - if user_signed_in?
+            %li
+              = link_to 'Dashboard', admin_path
+            %li
+              = link_to 'Account Settings', edit_user_registration_path
+            %li
+              = link_to 'Logout', destroy_user_session_path, method: :delete
+    %ul.nav.navbar.navbar-right
+      .row
+        .col-md-8
+          = form_tag search_vehicles_path, method: :get do
+            %li#search-icon
+              = text_field_tag :query, params[:query], placeholder: 'Search', type: 'text'

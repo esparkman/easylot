@@ -51,40 +51,41 @@
     -#             = text_field_tag :query, params[:query], placeholder: 'Search', type: 'text'
     -#           -# %li
     -#           -#   = submit_tag "Search", class: 'button hotrod', name: nil
-    %nav.navbar.navbar-default.main.camero
-      .container-fluid
-        .navbar-header
-          %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand.hidden-sm.hidden-md.hidden-lg{:href => "#"}
-            = image_tag 'new-logo.png'
-        .collapse.navbar-collapse
-          %ul.nav.navbar-nav.main
-            %li
-              = link_to "Home", root_path
-            %li
-              = link_to 'Inventory', vehicles_path
-            %li.hidden-xs
-              %a{:href => "#"}
-                = image_tag 'new-logo.png'
-            %li.pull-right
-              .row
-                .col-md-8
-                  - if user_signed_in?
-                    %li
-                      = link_to 'Dashboard', admin_path
-                    %li
-                      = link_to 'Account Settings', edit_user_registration_path
-                    %li
-                      = link_to 'Logout', destroy_user_session_path, method: :delete
-              .row.pull-right
-                .col-md-8
-                  = form_tag search_vehicles_path, method: :get do
-                    %li#search-icon
-                      = text_field_tag :query, params[:query], placeholder: 'Search', type: 'text'
+    = render 'shared/navigation'
+    -# %nav.navbar.navbar-default.main.camero
+    -#   .container-fluid
+    -#     .navbar-header
+    -#       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+    -#         %span.sr-only Toggle navigation
+    -#         %span.icon-bar
+    -#         %span.icon-bar
+    -#         %span.icon-bar
+    -#       %a.navbar-brand.hidden-sm.hidden-md.hidden-lg{:href => "#"}
+    -#         = image_tag 'new-logo.png'
+    -#     .collapse.navbar-collapse
+    -#       %ul.nav.navbar-nav.main
+    -#         %li
+    -#           = link_to "Home", root_path
+    -#         %li
+    -#           = link_to 'Inventory', vehicles_path
+    -#         %li.hidden-xs
+    -#           %a{:href => "#"}
+    -#             = image_tag 'new-logo.png'
+    -#         %li.pull-right
+    -#           .row
+    -#             .col-md-8
+    -#               - if user_signed_in?
+    -#                 %li
+    -#                   = link_to 'Dashboard', admin_path
+    -#                 %li
+    -#                   = link_to 'Account Settings', edit_user_registration_path
+    -#                 %li
+    -#                   = link_to 'Logout', destroy_user_session_path, method: :delete
+    -#           .row.pull-right
+    -#             .col-md-8
+    -#               = form_tag search_vehicles_path, method: :get do
+    -#                 %li#search-icon
+    -#                   = text_field_tag :query, params[:query], placeholder: 'Search', type: 'text'
     .container.vdp
       = yield
 
