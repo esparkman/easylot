@@ -1,27 +1,28 @@
-.row.vdp
-  .medium-6.columns
-    - if vehicle.photos?
+.row
+  .col-md-8
+    - if vehicle.photos.presence
       = image_tag vehicle.photos.first.large.url, class: 'thumbnail'
-      .row.small-up-4
+      .row
         - vehicle.photos.each do |photo|
-          .column
+          .col-md-3
             = image_tag photo.thumb.url, class: 'thumbnail'
     - else
       = image_tag 'no_image_available.jpeg', class: 'thumbnail'
 
     .row
-      .column
+      .col-md-12
         %p
           = vehicle.description
-  .medium-6.large-5.columns
+  .col-md-4
     %h3
       = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
+    %h5
       = "#{number_to_currency(vehicle.price)}"
     .row
-      .small-3.columns
+      .col-md-6
         %h4 Details
     .row
-      .small-6.columns
+      .col-md-12
         %ul
           %li= "Mileage: #{vehicle.mileage}"
           %li= "Engine: #{vehicle.engine}"
@@ -29,5 +30,3 @@
           %li= "Exterior Color: #{vehicle.ext_color}"
           %li= "Interior Color: #{vehicle.int_color}"
           %li= "VIN: #{vehicle.vin}"
-
-    %a.button.hotrod.large.expanded{:href => "#"} Contact Us
