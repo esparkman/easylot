@@ -11,15 +11,11 @@
     = javascript_include_tag 'application'
     = csrf_meta_tag
     / Bootstrap core CSS
-    = stylesheet_link_tag 'bootstrap.min.css', 'light-bootstrap-dashboard.css', 'pe-icon-7-stroke.css', :rel => 'stylesheet'
-    -# / Animation library for notifications
-    -# %link{:href => "../../../assets/animate.min.css", :rel => "stylesheet"}/
-    -# / Light Bootstrap Table core CSS
-    -# = asset_path 'light-bootstrap-dashboard.css', :rel => 'stylesheet'
-    / Fonts and icons
+    = stylesheet_link_tag 'application'
+
     %link{:href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,700,300", :rel => "stylesheet", :type => "text/css"}/
-    -# %link{:href => "../../../assets/pe-icon-7-stroke.css", :rel => "stylesheet"}/
+  
   %body
     .wrapper
       .sidebar{"data-color" => "black", "data-image" => "#{image_path('sidebar-5.jpg')}"}

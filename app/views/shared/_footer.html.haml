@@ -1,36 +1,40 @@
-%header.hero
-  %h1
-  %h2.subheader
-%footer.footer
-  .row.hotrod
-    .small-12.medium-6.medium-push-6.columns
-      %p.logo.show-for-small-only
-        %i.fi-target
-        J.R. Jackson Auto Sales
-      %form.footer-form
-        .row
-          %label.float-left Contact Us
-        .row
-          .small-6.columns
-            %label.float-left Toll Free: (888) 724-8607
-          .small-6.columns
-            %label.float-left Phone: (606) 561-5012
-        .row
-          .small-6.columns
-            %label.float-left Fax: (606) 561-8962
-          .small-6.columns
-            %label.float-left (Mobile): (606) 271-2149
+.listing-footer
+  .container
+    .row
+      .col-sm-6.col-xs-8
+        %h4 Who We Are
+        %p
+          J.R. Jackson Auto Sales in Burnside, Kentucky, close to the Tennessee
+          border, has been the leading dealer in used equipment and commercial
+          truck sales for over 35 years. We specialize in used light duty,
+          medium duty, medium-heavy duty, and heavy duty truck sales as well as
+          dump, conventional, bucket and box trucks, equipment and cars.
+          Come take a look at our commercial truck inventory.
+        %p
+          %a{:href => "#"}
+            More About Us
+            %i.glyphicon.glyphicon-arrow-right
 
-    .small-12.medium-6.medium-pull-6.columns
-      .row
-        %p.logo.hide-for-small-only.title.float-left
-          %i.fi-target
-          J.R. Jackson Auto Sales
-      .row
-        %ul.contact
+      .clearfix.visible-xs
+      .col-sm-6.col-xs-8
+        %h4 Contact Us
+        %ul.list-unstyled
           %li
-            %address
-              5610 S. Highway 27
-              %br
-              Somerset, KY 42501
-      %p.copyright &copy; #{Time.now.year} J.R. Jackson Auto Sales
+            %i.glyphicon.glyphicon-globe
+            5610 S. Highway 27
+            Somerset, KY 42501
+          %li
+            %i.glyphicon.glyphicon-phone
+            T: (888) 724-8607
+          %li
+            %i.glyphicon.glyphicon-phone
+            M: (606) 271-2149
+          %li
+            %i.glyphicon.glyphicon-phone
+            F: (606) 561-8962
+          %li
+            %i.glyphicon.glyphicon-envelope
+            %a{:href => "mailto:jrjackson5615012@yahoo.com"} jrjackson5615012@yahoo.com
+        %br
+        %br
+        %p J.R. Jackson Auto Sales powered by EasyLot &copy; #{Time.now.year}.

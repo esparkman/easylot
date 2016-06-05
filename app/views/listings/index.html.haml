@@ -1,18 +1,18 @@
-.row.column.text-center
+.row.text-center
   %h2 Our Featured Vehicles
   %hr/
-.row.small-up-2.large-up-4
+.row.vdp
   - vehicles.each do |vehicle|
-    .column
+    .col-md-4.vdp
       - if vehicle.photos?
-        = link_to image_tag(vehicle.photos.first.large.url, class: 'thumbnail'), vehicle
+        = link_to image_tag(vehicle.photos.first.thumb.url, class: 'thumbnail'), vehicle
       - else
-        = link_to image_tag('no_image_available.jpeg', class: 'thumbnail'), vehicle
+        = link_to image_tag('no_image_available-thumb.jpeg', class: 'thumbnail'), vehicle
       %h5
         = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
       %p
         = "#{number_to_currency(vehicle.price)}"
-      = link_to 'View Details', vehicle, class: 'button expaneded'
+      = link_to 'View Details', vehicle, class: 'btn btn-details btn-fill expaneded'
 
 %hr/
 .row.column.text-center

@@ -1,8 +1,24 @@
-@import "foundation_and_overrides";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'light-bootstrap-dashboard', 'pe-icon-7-stroke', 'animate.min';
 
 $hotrod: #8e3023;
 $camero: #7c2829;
+$white: #fff;
 
+// Custom Buttons
+.btn.btn-details {
+    color: $white;
+    background-color: $camero;
+    background-image: linear-gradient(to bottom, $hotrod, $camero);
+    border-color: $camero;
+    &:hover {
+      color: $white;
+      background-color: $camero;
+      background-image: linear-gradient(to bottom, $camero, $camero);
+      border-color: $camero;
+    }
+}
 .top-bar {
   background-color: #7c2829;
   height: 240px;
@@ -15,13 +31,51 @@ $camero: #7c2829;
   }
 }
 
-.menu {
-  li a {
-    display: inline-block;
+.navbar {
+  background-color: $camero;
+  min-height: auto;
+  position: relative;
+  top: 0px;
+  font-size: 20px;
+  width: auto;
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+.navbar-brand {
+  padding: 0 15px;
+  height: 96px;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    position: relative;
+    right: -50%;
+  }
+  .navbar-nav > li {
+    position: relative;
+    left: -50%;
+  }
+  .navbar-nav > li a {
+    line-height: 126px;
+    vertical-align: middle;
+    padding: 0 24px;
     color: $white;
-    &:hover {
-      text-decoration: underline;
-    }
+  }
+}
+
+.navbar-default .navbar-nav > li > a:not(.btn) {
+    color: $white;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav > li a {
+    padding: 0 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-nav > li a {
+    padding: 0 68px;
   }
 }
 
@@ -59,7 +113,7 @@ $camero: #7c2829;
 
 .vdp { padding-top: 20px;}
 
-.footer { background-color: $hotrod}
+.listing-footer { background-color: $hotrod}
 /* Variables */
 
 .ui-menu-item {
@@ -137,25 +191,9 @@ $logo-margin: - ($logo-width / 2);
 
 .title { text-align: left;}
 
-.footer {
+.listing-footer {
   background-color: $camero;
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 1rem;
-
-  .social a {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    background-color: #33383b;
-    border-radius: 2px;
-    font-size: 1.5rem;
-    color: #fff;
-    text-align: center;
-    line-height: 2rem;
-    margin: 0 3px 0 0;
-  }
-
+  color: $white;
   .copyright {
     color: #8f9296;
     font-size: 0.875rem;
