@@ -1,12 +1,25 @@
-.row.small-up-2.large-up-4.vdp
-  - vehicles.each do |vehicle|
-    .column
-      - if vehicle.photos?
-        = link_to image_tag(vehicle.photos.first.large.url, class: 'thumbnail'), vehicle
-      - else
-        = link_to image_tag('no_image_available.jpeg', class: 'thumbnail'), vehicle
-      %h5
-        = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
-      %p
-        = "#{number_to_currency(vehicle.price)}"
-      = link_to 'View Details', vehicle, class: 'button expaneded'
+.row
+  .col-md-12.vdp
+    .table-responsive
+      %table.table
+        %thead
+          %tr
+            %th
+            %th Price
+            %th Year
+            %th Make
+            %th Model
+            %th
+        %tbody
+          - vehicles.each do |vehicle|
+            %tr
+              %td
+                - if vehicle.photos?
+                  = link_to image_tag(vehicle.photos.first.thumb.url, class: 'thumbnail'), vehicle
+                - else
+                  = link_to image_tag('no_image_available-thumb.jpeg', class: 'thumbnail'), vehicle
+              %td= "#{number_to_currency(vehicle.price)}"
+              %td= vehicle.year
+              %td= vehicle.make
+              %td= vehicle.model
+              %td= link_to 'View Details', vehicle, class: 'btn btn-details btn-fill expanded'

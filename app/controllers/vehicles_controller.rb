@@ -1,5 +1,6 @@
 class VehiclesController < ApplicationController
   expose(:vehicle) { Vehicle.find(params[:id]) }
+  expose(:vehicle_photos) { vehicle.photos.each { |photo| photo.large.url } }
   expose(:vehicles) { Vehicle.search(vehicle_query, fields: [:make, :model, :year], match: :word_start, suggest: true) }
   expose(:vehicle_query) { params[:query].presence || '*' }
 
