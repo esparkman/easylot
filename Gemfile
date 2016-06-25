@@ -21,8 +21,8 @@ gem 'decent_exposure'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'config'
-gem 'puma'
 gem 'searchkick'
+gem 'puma', group: :production
 
 group :development, :test do
   gem 'pry'
