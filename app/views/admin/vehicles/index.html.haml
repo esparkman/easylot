@@ -7,9 +7,9 @@
   - admin_vehicles.each do |vehicle|
     .col-md-6.vdp
       - if vehicle.photos?
-        = link_to image_tag(vehicle.photos.first.large.url, class: 'thumbnail'), admin_vehicle_path(vehicle)
+        = link_to image_tag(vehicle.photos.first.thumb.url, class: 'thumbnail'), admin_vehicle_path(vehicle)
       - else
-        = link_to image_tag('no_image_available.jpeg', class: 'thumbnail'), admin_vehicle_path(vehicle)
+        = link_to image_tag('no_image_available-thumb.jpeg', class: 'thumbnail'), admin_vehicle_path(vehicle)
       %h5
         = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
       %p
