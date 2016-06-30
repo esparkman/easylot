@@ -20,10 +20,6 @@ $white: #fff;
     }
 }
 
-body {
-  border-top: 2px solid #F9F908;
-}
-
 .top-bar {
   background-color: #7c2829;
   height: 240px;
@@ -54,6 +50,7 @@ body {
 }
 
 .camero {
+  border-top: 2px solid #F9F908;
   background-color: $camero;
   min-height: auto;
   height: 220px;

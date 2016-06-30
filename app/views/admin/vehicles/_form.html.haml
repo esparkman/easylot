@@ -39,16 +39,25 @@
       = form.text_field :int_color, placeholder:'Interior Color', type: 'text', value: vehicle.int_color, class: 'form-control'
   .col-md-3
     .form-group
-      %label Doors
-      = form.text_field :doors, placeholder:'Doors', type: 'text', value: vehicle.doors, class: 'form-control'
+      %label Type of Interior
+      = form.text_field :interior_type, placeholder:'Type of Interior', type: 'text', value: vehicle.interior_type, class: 'form-control'
 .row
   .col-md-3
     .form-group
-      %label Type of Interior
-      = form.text_field :interior_type, placeholder:'Type of Interior', type: 'text', value: vehicle.interior_type, class: 'form-control'
+      %label Doors
+      = form.text_field :doors, placeholder:'Doors', type: 'text', value: vehicle.doors, class: 'form-control'
   .col-md-3
     .form-group
-      %label Does the Vehicle have a Warranty
+      %label Engine
+      = form.text_field :engine, placeholder:'Engine', type: 'text', value: vehicle.engine, class: 'form-control'
+  .col-md-3
+    .form-group
+      %label Transmission
+      = form.text_field :transmission, placeholder:'Transmission', type: 'text', value: vehicle.transmission, class: 'form-control'
+.row
+  .col-md-3
+    .form-group
+      %label Does Vehicle have a Warranty
       = form.check_box :warranty, value: false, class: 'form-control'
   .col-md-3
     .form-group
