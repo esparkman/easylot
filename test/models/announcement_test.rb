@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class AnnouncementTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  setup do
+    @announcement = Fabricate(:announcement)
+  end
+
+  test "Valid Announcement" do
+    assert @announcement.valid?
+  end
 end
