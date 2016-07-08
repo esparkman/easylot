@@ -24,6 +24,10 @@ gem 'config'
 gem 'searchkick'
 gem 'puma', group: :production
 
+group :staging do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
