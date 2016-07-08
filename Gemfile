@@ -26,7 +26,6 @@ gem 'puma', group: :production
 
 group :staging, :production do
   gem 'rails_12factor'
-  gem 'bonsai-elasticsearch-rails'
 end
 
 group :development, :test do
