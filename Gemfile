@@ -24,7 +24,7 @@ gem 'config'
 gem 'searchkick'
 gem 'puma', group: :production
 
-group :staging do
+group :staging, :production do
   gem 'rails_12factor'
 end
 
