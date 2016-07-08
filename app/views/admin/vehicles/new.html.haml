@@ -3,6 +3,15 @@
     .col-md-8
       .card
         .header
+          %h4.title Vehicle Photos
+        .content
+          .row.vdp
+            .col-md-4
+              %label 'Upload Photos'
+              = form.file_field :photos, multiple: true
+    .col-md-8
+      .card
+        .header
           %h4.title Add a Vehicle
         .content
           %form

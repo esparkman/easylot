@@ -31,6 +31,6 @@ class Admin::VehiclesController < Admin::AdminController
                                       :doors, :engine, :transmission, :int_color,
                                       :ext_color, :description, :warranty, :sold,
                                       :warranty_type, :used, :new, :featured,
-                                      :interior_type, :mileage)
+                                      :interior_type, :mileage, photos: [])
   end
 end
