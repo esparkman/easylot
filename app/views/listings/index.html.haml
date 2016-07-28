@@ -1,13 +1,13 @@
 .row.text-center
   %h2 Our Featured Vehicles
   %hr/
-.row.vdp
+.flex-row.row.vdp
   - vehicles.each do |vehicle|
-    .col-md-4.vdp
+    .col-lg-3.vdp
       - if vehicle.photos?
         = link_to image_tag(vehicle.photos.first.thumb.url, class: 'thumbnail'), vehicle
       - else
-        = link_to image_tag('no_image_available-thumb.jpeg', class: 'thumbnail'), vehicle
+        = link_to image_tag('no_image_available-thumb.jpg', class: 'thumbnail'), vehicle
       %h5
         = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
       %p
