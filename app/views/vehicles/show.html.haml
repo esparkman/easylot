@@ -1,28 +1,37 @@
-.row
+.row.vdp
+  .col-md-12
+    .card
+      .content
+        %p
+          = vehicle.description? ? vehicle.description : "No Description Available for this Vehicle"
   .col-md-8
     - if vehicle.photos.presence
       = carousel_for(vehicle_photos)
+      .row
+        - vehicle.photos.each do |photo|
+          .col-md-4
+            = image_tag photo.thumb.url, class: 'thumbnail img-responsive'
     - else
-      = image_tag 'no_image_available.jpeg', class: 'thumbnail'
+      = image_tag 'no_image_available.jpeg', class: 'thumbnail img-responsive'
 
-    .row
-      .col-md-12
-        %p
-          = vehicle.description
   .col-md-4
-    %h3
-      = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
-    %h5
-      = "#{number_to_currency(vehicle.price)}"
-    .row
-      .col-md-6
-        %h4 Details
-    .row
-      .col-md-12
-        %ul
-          %li= "Mileage: #{vehicle.mileage}"
-          %li= "Engine: #{vehicle.engine}"
-          %li= "Transmission: #{vehicle.transmission}"
-          %li= "Exterior Color: #{vehicle.ext_color}"
-          %li= "Interior Color: #{vehicle.int_color}"
-          %li= "VIN: #{vehicle.vin}"
+    .card
+      .content
+        %h3
+          = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
+        %h5
+          = "#{number_to_currency(vehicle.price)}"
+        .row
+          .col-md-6
+            %h4 Details
+        .row
+          .col-md-12
+            %ul
+              %li= "Mileage: #{vehicle.mileage}"
+              %li= "Engine: #{vehicle.engine}"
+              %li= "Transmission: #{vehicle.transmission}"
+              %li= "Exterior Color: #{vehicle.ext_color}"
+              %li= "Interior Color: #{vehicle.int_color}"
+              %li= "VIN: #{vehicle.vin}"
+
+
