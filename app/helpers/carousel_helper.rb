@@ -27,8 +27,8 @@ module CarouselHelper
     def indicator_tag(index)
       options = {
         class: (index.zero? ? 'active' : ''),
-        data: { 
-          target: uid, 
+        data: {
+          target: uid,
           slide_to: index
         }
       }

@@ -6,6 +6,16 @@ $hotrod: #8e3023;
 $camero: #7c2829;
 $white: #fff;
 
+// Flexbox Grid
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
 // Custom Buttons
 .btn.btn-details {
     color: $white;

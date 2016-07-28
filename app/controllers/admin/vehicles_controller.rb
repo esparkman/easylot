@@ -1,5 +1,6 @@
 class Admin::VehiclesController < Admin::AdminController
   expose(:vehicle, attributes: :vehicle_params)
+  expose(:vehicle_photos) { vehicle.photos.each { |photo| photo.large.url } }
   expose(:admin_vehicles) { Vehicle.all }
 
   def create
