@@ -12,7 +12,8 @@
         = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
       %p
         = "#{number_to_currency(vehicle.price)}"
-      = link_to 'View Details', vehicle, class: 'btn btn-details btn-fill expaneded'
+      .col-lg
+        = link_to 'View Details', vehicle, class: 'btn btn-details btn-fill expanded'
 
 %hr/
 .row.column.text-center

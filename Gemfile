@@ -9,7 +9,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'haml-rails'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass'
-# gem 'foundation-rails'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
