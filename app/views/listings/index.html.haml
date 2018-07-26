@@ -4,6 +4,10 @@
 .flex-row.row.vdp
   - vehicles.each do |vehicle|
     .col-lg-3.vdp
+      - if vehicle.featured
+        .ribbon-wrapper
+          .ribbon
+            FEATURED
       - if vehicle.photos?
         = link_to image_tag(vehicle.photos.first.thumb.url, class: 'thumbnail'), vehicle
       - else
