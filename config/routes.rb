@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :vehicles do
       resources :photos
     end
+    resources :settings
   end
 
   resources :announcements, only: [:index, :show]

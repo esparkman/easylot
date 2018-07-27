@@ -1,25 +1,20 @@
-.row
-  .col-md-12.vdp
-    .table-responsive
-      %table.table
-        %thead
-          %tr
-            %th
-            %th Price
-            %th Year
-            %th Make
-            %th Model
-            %th
-        %tbody
-          - vehicles.each do |vehicle|
-            %tr
-              %td
-                - if vehicle.photos?
-                  = link_to image_tag(vehicle.photos.first.thumb.url, class: 'thumbnail'), vehicle
-                - else
-                  = link_to image_tag('no_image_available-thumb.jpeg', class: 'thumbnail'), vehicle
-              %td= "#{number_to_currency(vehicle.price)}"
-              %td= vehicle.year
-              %td= vehicle.make
-              %td= vehicle.model
-              %td= link_to 'View Details', vehicle, class: 'btn btn-details btn-fill expanded'
+.row.text-center
+  %h2 Our Inventory
+  %hr/
+.flex-row.row.vdp
+  - vehicles.each do |vehicle|
+    .col-lg-3.vdp
+      - if vehicle.featured
+        .ribbon-wrapper
+          .ribbon
+            FEATURED
+      - if vehicle.photos?
+        = link_to image_tag(vehicle.photos.first.thumb.url, class: 'thumbnail'), vehicle
+      - else
+        = link_to image_tag('no_image_available-thumb.jpg', class: 'thumbnail'), vehicle
+      %h5
+        = "#{vehicle.year} #{vehicle.make} #{vehicle.model} #{vehicle.trim}"
+      %p
+        = "#{number_to_currency(vehicle.price)}"
+      .col-lg
+        = link_to 'View Details', vehicle, class: 'btn btn-details btn-fill expanded'

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-gem 'rails', '4.2.6'
+gem 'rails', '~> 4.2.7.1'
 gem 'pg', '~> 0.15'
 
 gem 'sass-rails', '~> 5.0'
@@ -16,7 +16,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
-gem 'decent_exposure'
+gem 'decent_exposure', '2.3.3'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'config'
