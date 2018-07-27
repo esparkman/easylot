@@ -13,7 +13,5 @@
                 %td
                 %td= announcement.title
                 %td.td-actions.text-right
-                  = link_to 'Edit Announcement', edit_admin_announcement_path(announcement), class: 'btn btn-info btn-simple btn-xs', title: 'Edit Task'
-                  %i.fa.fa-edit
-                  = link_to 'Destroy', admin_announcement_path(announcement), class: 'btn btn-danger btn-simple btn-xs', title: 'Remove', method: :delete, data:{confirm:'are you sure you want to delete this vehicle'}
-                  %i.fa.fa-times
+                  = link_to 'Edit Announcement', edit_admin_announcement_path(announcement), class: 'btn btn-primary btn-simple', title: 'Edit Announcement'
+                  = link_to 'Destroy', admin_announcement_path(announcement), class: 'btn btn-danger btn-simple', title: 'Remove', method: :delete, data:{confirm:'Are you sure you want to delete this Announcement'}
