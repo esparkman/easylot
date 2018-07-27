@@ -1,0 +1,18 @@
+.col-md-12
+  .card
+    .header
+      %h4.title Site Settings
+
+    .content
+      .table-full-width
+        %table.table
+          %tbody
+            - settings.each do |setting|
+              %tr
+                %td
+                %td= setting.footer
+                %td.td-actions.text-right
+                  = link_to 'Edit Footer', edit_admin_setting_path(setting), class: 'btn btn-primary btn-simple', title: 'Edit Footer'
+
+                %td.td-actions.text-right
+                  = link_to 'Destroy', admin_setting_path(setting), class: 'btn btn-danger btn-simple', title: 'Remove', method: :delete, data:{confirm:'Are you sure you want to delete Footer text?'}
